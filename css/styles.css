@@ -29,6 +29,9 @@
    --accent-hover-color: rgba(33, 150, 243, 0.9);
    --overlay-color: rgba(0, 0, 0, 0.2);
    --modal-color: rgba(0, 0, 0, 0.1);
+   --modal-border-color: rgba(33, 33, 33, 0.2);
+   --textarea-color: rgba(117, 117, 117, 0.5);
+
 
    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -273,7 +276,7 @@ body {
 
 }
 
-
+/*---------------- Стилизация модалки ----------------*/
 .backdrop {
    position: fixed;
    top: 0;
@@ -284,6 +287,8 @@ body {
    background-color: var(--overlay-color);
 
    transform: scale(1.15);
+
+   z-index: 2;
 
    transition: opacity 250ms var(--timing-function),
       visibility 250ms var(--timing-function),
@@ -302,6 +307,7 @@ body {
    position: absolute;
    top: 50%;
    left: 50%;
+   padding: 40px;
    transform: translate(-50%, -50%);
 
    min-width: 528px;
@@ -312,7 +318,167 @@ body {
    border-radius: 4px;
 }
 
-.btn-modal {
+.modal-title {
+   margin: 0;
+   margin-bottom: 12px;
+
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 1.15;
+   text-align: center;
+   letter-spacing: 0.03em;
+   color: var(--secondary-text-color);
+
+}
+
+
+.modal-form {
+   width: 448px;
+   margin-left: auto;
+   margin-right: auto;
+
+   /* outline: 1px solid #06bbc1; */
+}
+
+.modal-form__box {
+   margin-bottom: 10px;
+   display: flex;
+   flex-direction: column;
+
+
+   /* outline: 1px solid rgba(241, 37, 220, 0.658); */
+}
+
+.modal-form__label {
+   margin-bottom: 4px;
+
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 1.15;
+   letter-spacing: 0.01em;
+
+}
+
+.modal-form__boxinput {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+
+   margin: 0;
+   margin-bottom: 10px;
+   padding: 12px;
+   border: 1px solid var(--modal-border-color);
+   border-radius: 4px;
+   transition: border 250ms var(--timing-function),
+      fill 250ms var(--timing-function);
+
+}
+
+.modal-form__input {
+   /* margin: 0;
+   padding: 12px;*/
+   margin-left: 30px;
+   border: none;
+   outline: none;
+
+   /* transition: border 250ms var(--timing-function); */
+}
+
+.modal-form__boxinput:hover,
+.modal-form__boxinput:focus {
+   border: 1px solid var(--accent-color);
+   fill: var(--accent-color);
+
+}
+
+.modal-form__icon {
+   position: absolute;
+   top: 12px;
+   left: 12px;
+
+   display: inline-block;
+   width: 18px;
+   height: 18px;
+   /* margin-right: 15px; */
+
+   /* background-color: tomato; */
+
+
+}
+
+/* .modal-form__icon:hover,
+.modal-form__icon:focus {
+   fill: var(--accent-color);
+} */
+
+
+.modal-form__commentbox {
+   display: flex;
+   flex-direction: column;
+   padding: 12px 16px;
+   margin-bottom: 20px;
+
+   border: 1px solid var(--modal-border-color);
+   border-radius: 4px;
+}
+
+.modal-form__textarea {
+   height: 120px;
+
+   resize: none;
+   border: 0;
+
+}
+
+.modal-form__textarea::placeholder {
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 1.14;
+   letter-spacing: 0.01em;
+   color: var(--textarea-color);
+}
+
+.modal-form__checkbox {
+   width: 423px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 30px;
+}
+
+.modal-form__agreement {
+   font-size: 14px;
+   line-height: 1.71;
+   letter-spacing: 0.03em;
+}
+
+.modal-form__link {
+   color: var(--accent-color);
+}
+
+.modal-form__btn {
+   display: flex;
+   margin-left: auto;
+   margin-right: auto;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   min-width: 200px;
+   justify-content: center;
+
+   font-family: inherit;
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 1.88;
+   letter-spacing: 0.06em;
+   border: 1px solid transparent;
+   border-radius: 4px;
+
+   color: var(--white-text-color);
+   background-color: var(--accent-color);
+
+   cursor: pointer;
+}
+
+.modal-form__close {
    position: absolute;
    top: 0;
    right: 0;
@@ -331,6 +497,7 @@ body {
    background-color: var(--white-background-color);
    color: var(--modal-color);
 }
+
 
 
 /*---------------- Стилизация раздела преимуществ ----------------*/
@@ -586,8 +753,6 @@ body {
    fill: var(--icon-color);
    transition: border 250ms var(--timing-function),
       fill 250ms var(--timing-function);
-
-
 
 }
 

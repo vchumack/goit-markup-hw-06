@@ -61,13 +61,65 @@
       <!-- Герой  -->
       <section class="hero">
         <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-        <button data-modal-open type="button" class="hero__btn">Заказать услугу</button>
+        <button class="hero__btn" type="button" data-modal-open>Заказать услугу</button>
       </section>
 
       <!-- модальное окно -->
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          <button data-modal-close class="btn-modal">
+          <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+          <form class="modal-form">
+            <div class="modal-form__box">
+              <label class="modal-form__label" for="name">Имя</label>
+              <div class="modal-form__boxinput">
+                <input class="modal-form__input" type="text" name="name" id="name" />
+                <svg class="modal-form__icon" width="18px" height="18px">
+                  <use href="./images/sprite.svg#icon-modalmen"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="modal-form__box">
+              <label class="modal-form__label" for="tel">Телефон</label>
+              <div class="modal-form__boxinput">
+                <input class="modal-form__input" type="tel" name="tel" id="tel" />
+                <svg class="modal-form__icon" width="18px" height="18px">
+                  <use href="./images/sprite.svg#icon-modaltel"></use>
+                </svg></div>
+            </div>
+
+            <div class="modal-form__box">
+              <label class="modal-form__label" for="mail">Почта</label>
+              <div class="modal-form__boxinput">
+                <input class="modal-form__input" type="email" name="mail" id="namailme" />
+                <svg class="modal-form__icon" width="18px" height="18px">
+                  <use href="./images/sprite.svg#icon-modalmail"></use>
+                </svg>
+              </div>
+            </div>
+            <label class="modal-form__label" for="comment">Комментарий</label>
+            <div class="modal-form__commentbox">
+              <textarea
+                class="modal-form__textarea"
+                name="comment"
+                id="comment"
+                rows="8"
+                placeholder="Введите текст"
+              ></textarea>
+            </div>
+
+            <div class="modal-form__checkbox">
+              <input type="checkbox" name="policy" id="policy" />
+              <label class="modal-form__agreement for="policy">Соглашаюсь с рассылкой и принимаю 
+                <a class="modal-form__link" href="">Условия договора</a>
+              </label>
+            </div>
+
+              <button class="modal-form__btn" type="submit">Отправить</button>
+            
+          </form>
+
+          <button class="modal-form__close" data-modal-close >
             <svg class="" width="18px" height="18px">
               <use href="./images/sprite.svg#icon-close-black"></use>
             </svg>
