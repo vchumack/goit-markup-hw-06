@@ -21,6 +21,7 @@
    --footer-background-color: #2f303a;
    --footer-text-color: rgba(255, 255, 255, 1);
    --accent-color: #2196f3;
+   --accent-modal-btn-color: #188CE8;
    --secondary-link-color: rgba(255, 255, 255, 0.6);
    --border-color: #ececec;
    --secondary-border-color: #eeeeee;
@@ -518,7 +519,19 @@ body {
    background-color: var(--accent-color);
 
    cursor: pointer;
+
+   transition: background-color 250ms var(--timing-function),
+      box-shadow 250ms var(--timing-function),
+      border-radius 250ms var(--timing-function);
 }
+
+.modal-form__btn:hover,
+.modal-form__btn:focus {
+   background-color: var(--accent-modal-btn-color);
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+   border-radius: 4px;
+}
+
 
 .modal-form__close {
    position: absolute;
