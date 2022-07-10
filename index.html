@@ -69,9 +69,9 @@
         <div class="modal">
           <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
           <form class="modal-form">
-            <div class="modal-form__box">
+            <div class="element-box">
               <label class="modal-form__label" for="name">Имя</label>
-              <div class="modal-form__boxinput">
+              <div class="input-box">
                 <input class="modal-form__input" type="text" name="name" id="name" />
                 <svg class="modal-form__icon" width="18px" height="18px">
                   <use href="./images/sprite.svg#icon-modalmen"></use>
@@ -79,26 +79,28 @@
               </div>
             </div>
 
-            <div class="modal-form__box">
+            <div class="element-box">
               <label class="modal-form__label" for="tel">Телефон</label>
-              <div class="modal-form__boxinput">
+              <div class="input-box">
                 <input class="modal-form__input" type="tel" name="tel" id="tel" />
                 <svg class="modal-form__icon" width="18px" height="18px">
                   <use href="./images/sprite.svg#icon-modaltel"></use>
-                </svg></div>
+                </svg>
+              </div>
             </div>
 
-            <div class="modal-form__box">
+            <div class="element-box">
               <label class="modal-form__label" for="mail">Почта</label>
-              <div class="modal-form__boxinput">
+              <div class="input-box">
                 <input class="modal-form__input" type="email" name="mail" id="namailme" />
                 <svg class="modal-form__icon" width="18px" height="18px">
                   <use href="./images/sprite.svg#icon-modalmail"></use>
                 </svg>
               </div>
             </div>
+
             <label class="modal-form__label" for="comment">Комментарий</label>
-            <div class="modal-form__commentbox">
+            <div class="comment-box">
               <textarea
                 class="modal-form__textarea"
                 name="comment"
@@ -108,18 +110,17 @@
               ></textarea>
             </div>
 
-            <div class="modal-form__checkbox">
-              <input type="checkbox" name="policy" id="policy" />
-              <label class="modal-form__agreement for="policy">Соглашаюсь с рассылкой и принимаю 
-                <a class="modal-form__link" href="">Условия договора</a>
-              </label>
-            </div>
+            <label class="modal-form__agreement">
+              <input class="modal-form__checkbox" type="checkbox" name="policy" />
+              <span class="modal-form__checkmark"></span>
+              Соглашаюсь с рассылкой и принимаю&nbsp
+              <a class="modal-form__link" href="">Условия договора</a>
+            </label>
 
-              <button class="modal-form__btn" type="submit">Отправить</button>
-            
+            <button class="modal-form__btn" type="submit">Отправить</button>
           </form>
 
-          <button class="modal-form__close" data-modal-close >
+          <button class="modal-form__close" data-modal-close>
             <svg class="" width="18px" height="18px">
               <use href="./images/sprite.svg#icon-close-black"></use>
             </svg>
@@ -456,7 +457,7 @@
           </address>
         </div>
         <div class="join-box">
-          <h3 class="join-title">присоединяйтесь</h3>
+          <h3 class="footer-title">присоединяйтесь</h3>
           <ul class="join-icon__list list">
             <li class="join-icon__item">
               <a class="join-icon__link" href="">
@@ -487,6 +488,21 @@
               </a>
             </li>
           </ul>
+        </div>
+
+        <div class="mail-box">
+          <h3 class="footer-title">Подпишитесь на рассылку</h3>
+          <form class="mail-form">
+            <label class="mail-form__label">
+              <input class="mail-form__input" type="email" name="mail" placeholder="E-mail" />
+            </label>
+            <button class="mail-form__btn" type="submit">
+              Подписаться
+              <svg class="mail-form__svg" width="20px" height="20px">
+                <use href="./images/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
