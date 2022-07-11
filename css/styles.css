@@ -287,8 +287,6 @@ body {
 
    background-color: var(--overlay-color);
 
-   transform: scale(1.15);
-
    z-index: 2;
 
    transition: opacity 250ms var(--timing-function),
@@ -311,7 +309,7 @@ body {
    padding: 40px;
    transform: translate(-50%, -50%);
 
-   min-width: 528px;
+   width: 528px;
    min-height: 581px;
 
    background-color: var(--white-background-color);
